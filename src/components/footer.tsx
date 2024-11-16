@@ -6,11 +6,11 @@ import UTPLogo from "../images/UTPLogo.png"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8 mt-8">
+    <footer className="bg-gray-200 text-black py-8 mt-8">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         {/* Left Section */}
         <div className="mb-4 md:mb-0 flex flex-col items-center md:items-start">
-         <div className='flex justify-center  w-full'>
+         <div className='flex justify-center   w-full'>
              <Image
                src={UTPLogo} // Adjust the path according to where you saved the logo
                alt="Universidad Tecnológica de Pereira Logo"
