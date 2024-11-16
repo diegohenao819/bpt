@@ -1,0 +1,162 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "The book on the table belongs to Sarah, _________?",
+      "options": [
+        "don’t it",
+        "isn’t it",
+        "doesn’t it"
+      ],
+      "correctAnswer": "doesn’t it"
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "He always _______ his homework on time.",
+      "options": [
+        "does",
+        "do",
+        "doing"
+      ],
+      "correctAnswer": "does"
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "The students were so excited that they shouted _______.",
+      "options": [
+        "loudly",
+        "silently",
+        "quietly"
+      ],
+      "correctAnswer": "loudly"
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "If she _______ earlier, she would have caught the bus.",
+      "options": [
+        "left",
+        "leaves",
+        "had left"
+      ],
+      "correctAnswer": "had left"
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "_______ you mind opening the window?",
+      "options": [
+        "Would",
+        "Should",
+        "Could"
+      ],
+      "correctAnswer": "Would"
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "They haven’t decided what _______ for dinner yet.",
+      "options": [
+        "eating",
+        "to eat",
+        "eat"
+      ],
+      "correctAnswer": "to eat"
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "The new policy has been _______ since last year.",
+      "options": [
+        "implementing",
+        "implemented",
+        "implement"
+      ],
+      "correctAnswer": "implemented"
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "_______ the heavy rain, they managed to finish the marathon.",
+      "options": [
+        "Despite",
+        "Although",
+        "However"
+      ],
+      "correctAnswer": "Despite"
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "She told me she _______ to the concert before.",
+      "options": [
+        "hasn’t been",
+        "hadn’t been",
+        "wasn’t"
+      ],
+      "correctAnswer": "hadn’t been"
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "He spoke _______ than anyone else during the meeting.",
+      "options": [
+        "more clearly",
+        "most clearly",
+        "clear"
+      ],
+      "correctAnswer": "more clearly"
+    },
+    {
+      "id": 11,
+      "type": "fill-in-the-gap",
+      "question": "Global warming is one of the most significant _______ challenges of our time. (ENVIRONMENT)",
+      "correctAnswer": "environmental"
+    },
+    {
+      "id": 12,
+      "type": "fill-in-the-gap",
+      "question": "The increase in greenhouse gas emissions has led to _______ changes in weather patterns. (DRAMA)",
+      "correctAnswer": "dramatic"
+    },
+    {
+      "id": 13,
+      "type": "fill-in-the-gap",
+      "question": "Many species are now at risk of _______ due to habitat loss. (EXTINCT)",
+      "correctAnswer": "extinction"
+    },
+    {
+      "id": 14,
+      "type": "fill-in-the-gap",
+      "question": "Governments must implement _______ measures to combat this crisis. (EFFECT)",
+      "correctAnswer": "effective"
+    },
+    {
+      "id": 15,
+      "type": "fill-in-the-gap",
+      "question": "Raising public _______ is essential to encourage action. (AWARE)",
+      "correctAnswer": "awareness"
+    },
+    {
+      "id": 16,
+      "type": "fill-in-the-gap",
+      "question": "Industries need to adopt more _______ practices to reduce their impact. (SUSTAIN)",
+      "correctAnswer": "sustainable"
+    },
+    {
+      "id": 17,
+      "type": "fill-in-the-gap",
+      "question": "The _______ of individuals through recycling can make a difference. (CONTRIBUTE)",
+      "correctAnswer": "contribution"
+    },
+    {
+      "id": 18,
+      "type": "fill-in-the-gap",
+      "question": "Scientists warn that our _______ of this issue could have catastrophic consequences. (IGNORE)",
+      "correctAnswer": "ignorance"
+    }
+  ]
+}
