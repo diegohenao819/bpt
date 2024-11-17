@@ -1,162 +1,280 @@
 {
-  "questions": [
+  "sections": [
     {
-      "id": 1,
-      "type": "multiple-choice",
-      "question": "The book on the table belongs to Sarah, _________?",
-      "options": [
-        "don’t it",
-        "isn’t it",
-        "doesn’t it"
-      ],
-      "correctAnswer": "doesn’t it"
+      "title": "Multiple-Choice Cloze",
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-choice",
+          "question": "Despite numerous warnings, he _______ to comply with the safety regulations.",
+          "options": ["refused", "denied", "objected", "declined"],
+          "correctAnswer": "refused"
+        },
+        {
+          "id": 2,
+          "type": "multiple-choice",
+          "question": "The scientist's groundbreaking discovery was _______ to change the course of medical history.",
+          "options": ["destined", "fated", "doomed", "ordained"],
+          "correctAnswer": "destined"
+        },
+        {
+          "id": 3,
+          "type": "multiple-choice",
+          "question": "She has a natural _______ for languages and can speak six fluently.",
+          "options": ["aptitude", "attitude", "altitude", "longitude"],
+          "correctAnswer": "aptitude"
+        },
+        {
+          "id": 4,
+          "type": "multiple-choice",
+          "question": "The committee reached a unanimous decision after a long _______.",
+          "options": ["debate", "debacle", "debut", "debt"],
+          "correctAnswer": "debate"
+        },
+        {
+          "id": 5,
+          "type": "multiple-choice",
+          "question": "He was not only late but also arrived without his report, which was _______ irresponsible.",
+          "options": ["utterly", "fairly", "mildly", "scarcely"],
+          "correctAnswer": "utterly"
+        },
+        {
+          "id": 6,
+          "type": "multiple-choice",
+          "question": "The new policy will come into _______ starting next month.",
+          "options": ["effect", "affect", "effort", "afford"],
+          "correctAnswer": "effect"
+        },
+        {
+          "id": 7,
+          "type": "multiple-choice",
+          "question": "She _______ her success to hard work and a bit of luck.",
+          "options": ["attributes", "contributes", "distributes", "retributes"],
+          "correctAnswer": "attributes"
+        },
+        {
+          "id": 8,
+          "type": "multiple-choice",
+          "question": "The manager demanded that the report _______ completed by Friday.",
+          "options": ["be", "was", "is", "to be"],
+          "correctAnswer": "be"
+        },
+        {
+          "id": 9,
+          "type": "multiple-choice",
+          "question": "Had it not been for her timely intervention, the project _______ a disaster.",
+          "options": ["would have been", "will be", "had been", "was"],
+          "correctAnswer": "would have been"
+        },
+        {
+          "id": 10,
+          "type": "multiple-choice",
+          "question": "He acted as if he _______ everything, which annoyed everyone.",
+          "options": ["knew", "had known", "knows", "was knowing"],
+          "correctAnswer": "knew"
+        }
+      ]
     },
     {
-      "id": 2,
-      "type": "multiple-choice",
-      "question": "He always _______ his homework on time.",
-      "options": [
-        "does",
-        "do",
-        "doing"
-      ],
-      "correctAnswer": "does"
+      "title": "Open Cloze",
+      "questions": [
+        {
+          "id": 11,
+          "type": "fill-in-the-gap",
+          "question": "No sooner had they arrived _______ it started to rain heavily.",
+          "correctAnswer": "than"
+        },
+        {
+          "id": 12,
+          "type": "fill-in-the-gap",
+          "question": "Hardly _______ I sat down when the phone rang.",
+          "correctAnswer": "had"
+        },
+        {
+          "id": 13,
+          "type": "fill-in-the-gap",
+          "question": "She is used _______ getting up early for work.",
+          "correctAnswer": "to"
+        },
+        {
+          "id": 14,
+          "type": "fill-in-the-gap",
+          "question": "If only I _______ known about the meeting earlier.",
+          "correctAnswer": "had"
+        },
+        {
+          "id": 15,
+          "type": "fill-in-the-gap",
+          "question": "He went to the store _______ buy some milk.",
+          "correctAnswer": "to"
+        },
+        {
+          "id": 16,
+          "type": "fill-in-the-gap",
+          "question": "She prefers tea _______ coffee in the mornings.",
+          "correctAnswer": "to"
+        },
+        {
+          "id": 17,
+          "type": "fill-in-the-gap",
+          "question": "I wish I _______ more time to finish this project.",
+          "correctAnswer": "had"
+        },
+        {
+          "id": 18,
+          "type": "fill-in-the-gap",
+          "question": "Despite _______ exhausted, he continued working.",
+          "correctAnswer": "being"
+        },
+        {
+          "id": 19,
+          "type": "fill-in-the-gap",
+          "question": "She apologized _______ being late.",
+          "correctAnswer": "for"
+        },
+        {
+          "id": 20,
+          "type": "fill-in-the-gap",
+          "question": "They insisted _______ paying for the meal.",
+          "correctAnswer": "on"
+        }
+      ]
     },
     {
-      "id": 3,
-      "type": "multiple-choice",
-      "question": "The students were so excited that they shouted _______.",
-      "options": [
-        "loudly",
-        "silently",
-        "quietly"
-      ],
-      "correctAnswer": "loudly"
+      "title": "Word Formation",
+      "questions": [
+        {
+          "id": 21,
+          "type": "word-formation",
+          "question": "His _______ to help was greatly appreciated. (willing)",
+          "correctAnswer": "willingness"
+        },
+        {
+          "id": 22,
+          "type": "word-formation",
+          "question": "The new policy led to a significant _______ in productivity. (reduce)",
+          "correctAnswer": "reduction"
+        },
+        {
+          "id": 23,
+          "type": "word-formation",
+          "question": "She approached the task with great _______. (enthuse)",
+          "correctAnswer": "enthusiasm"
+        },
+        {
+          "id": 24,
+          "type": "word-formation",
+          "question": "They were impressed by his _______ to the company. (loyal)",
+          "correctAnswer": "loyalty"
+        },
+        {
+          "id": 25,
+          "type": "word-formation",
+          "question": "The artist's latest _______ will be exhibited tomorrow. (create)",
+          "correctAnswer": "creation"
+        },
+        {
+          "id": 26,
+          "type": "word-formation",
+          "question": "He was fired for his _______ behavior at work. (profession)",
+          "correctAnswer": "unprofessional"
+        },
+        {
+          "id": 27,
+          "type": "word-formation",
+          "question": "Her speech was full of _______ references. (history)",
+          "correctAnswer": "historical"
+        },
+        {
+          "id": 28,
+          "type": "word-formation",
+          "question": "The _______ of the building took two years. (construct)",
+          "correctAnswer": "construction"
+        },
+        {
+          "id": 29,
+          "type": "word-formation",
+          "question": "She is studying to become a _______. (law)",
+          "correctAnswer": "lawyer"
+        },
+        {
+          "id": 30,
+          "type": "word-formation",
+          "question": "They enjoyed the _______ weather during their vacation. (delight)",
+          "correctAnswer": "delightful"
+        }
+      ]
     },
     {
-      "id": 4,
-      "type": "multiple-choice",
-      "question": "If she _______ earlier, she would have caught the bus.",
-      "options": [
-        "left",
-        "leaves",
-        "had left"
-      ],
-      "correctAnswer": "had left"
-    },
-    {
-      "id": 5,
-      "type": "multiple-choice",
-      "question": "_______ you mind opening the window?",
-      "options": [
-        "Would",
-        "Should",
-        "Could"
-      ],
-      "correctAnswer": "Would"
-    },
-    {
-      "id": 6,
-      "type": "multiple-choice",
-      "question": "They haven’t decided what _______ for dinner yet.",
-      "options": [
-        "eating",
-        "to eat",
-        "eat"
-      ],
-      "correctAnswer": "to eat"
-    },
-    {
-      "id": 7,
-      "type": "multiple-choice",
-      "question": "The new policy has been _______ since last year.",
-      "options": [
-        "implementing",
-        "implemented",
-        "implement"
-      ],
-      "correctAnswer": "implemented"
-    },
-    {
-      "id": 8,
-      "type": "multiple-choice",
-      "question": "_______ the heavy rain, they managed to finish the marathon.",
-      "options": [
-        "Despite",
-        "Although",
-        "However"
-      ],
-      "correctAnswer": "Despite"
-    },
-    {
-      "id": 9,
-      "type": "multiple-choice",
-      "question": "She told me she _______ to the concert before.",
-      "options": [
-        "hasn’t been",
-        "hadn’t been",
-        "wasn’t"
-      ],
-      "correctAnswer": "hadn’t been"
-    },
-    {
-      "id": 10,
-      "type": "multiple-choice",
-      "question": "He spoke _______ than anyone else during the meeting.",
-      "options": [
-        "more clearly",
-        "most clearly",
-        "clear"
-      ],
-      "correctAnswer": "more clearly"
-    },
-    {
-      "id": 11,
-      "type": "fill-in-the-gap",
-      "question": "Global warming is one of the most significant _______ challenges of our time. (ENVIRONMENT)",
-      "correctAnswer": "environmental"
-    },
-    {
-      "id": 12,
-      "type": "fill-in-the-gap",
-      "question": "The increase in greenhouse gas emissions has led to _______ changes in weather patterns. (DRAMA)",
-      "correctAnswer": "dramatic"
-    },
-    {
-      "id": 13,
-      "type": "fill-in-the-gap",
-      "question": "Many species are now at risk of _______ due to habitat loss. (EXTINCT)",
-      "correctAnswer": "extinction"
-    },
-    {
-      "id": 14,
-      "type": "fill-in-the-gap",
-      "question": "Governments must implement _______ measures to combat this crisis. (EFFECT)",
-      "correctAnswer": "effective"
-    },
-    {
-      "id": 15,
-      "type": "fill-in-the-gap",
-      "question": "Raising public _______ is essential to encourage action. (AWARE)",
-      "correctAnswer": "awareness"
-    },
-    {
-      "id": 16,
-      "type": "fill-in-the-gap",
-      "question": "Industries need to adopt more _______ practices to reduce their impact. (SUSTAIN)",
-      "correctAnswer": "sustainable"
-    },
-    {
-      "id": 17,
-      "type": "fill-in-the-gap",
-      "question": "The _______ of individuals through recycling can make a difference. (CONTRIBUTE)",
-      "correctAnswer": "contribution"
-    },
-    {
-      "id": 18,
-      "type": "fill-in-the-gap",
-      "question": "Scientists warn that our _______ of this issue could have catastrophic consequences. (IGNORE)",
-      "correctAnswer": "ignorance"
+      "title": "Key Word Transformation",
+      "questions": [
+        {
+          "id": 31,
+          "type": "key-word-transformation",
+          "question": "It wasn't necessary for you to bring an umbrella. (HAVE)\nYou _______ an umbrella.",
+          "correctAnswer": ["didn't have to bring", "did not have to bring", "didn’t have to bring"]
+        },
+        {
+          "id": 32,
+          "type": "key-word-transformation",
+          "question": "She started working here five years ago. (FOR)\nShe _______ five years.",
+          "correctAnswer": ["has been working here for"]
+        },
+        {
+          "id": 33,
+          "type": "key-word-transformation",
+          "question": "He didn't study, so he failed the exam. (IF)\n_______, he wouldn't have failed the exam.",
+          "correctAnswer": [
+            "If he had studied",
+       
+            "If he'd studied",
+ 
+            "If he’d studied"
+          ]
+        },
+        {
+          "id": 34,
+          "type": "key-word-transformation",
+          "question": "They postponed the meeting because of the storm. (PUT)\nThey _______ of the storm.",
+          "correctAnswer": ["put off the meeting because"]
+        },
+        {
+          "id": 35,
+          "type": "key-word-transformation",
+          "question": "I regret telling her my secret. (WISH)\nI _______ her my secret.",
+          "correctAnswer": ["wish I hadn't told", "wish I had not told", "wish I hadn’t told"]
+        },
+        {
+          "id": 36,
+          "type": "key-word-transformation",
+          "question": "It's possible that he forgot about the appointment. (MAY)\nHe _______ about the appointment.",
+          "correctAnswer": ["may have forgotten"]
+        },
+        {
+          "id": 37,
+          "type": "key-word-transformation",
+          "question": "She sings better than anyone else in the choir. (BEST)\nShe _______ in the choir.",
+          "correctAnswer": ["sings the best"]
+        },
+        {
+          "id": 38,
+          "type": "key-word-transformation",
+          "question": "They built a new library in the town center. (WAS)\nA new library _______ in the town center.",
+          "correctAnswer": ["was built"]
+        },
+        {
+          "id": 39,
+          "type": "key-word-transformation",
+          "question": "I haven't seen him for two years. (LAST)\nThe _______ two years ago.",
+          "correctAnswer": ["last time I saw him was"]
+        },
+        {
+          "id": 40,
+          "type": "key-word-transformation",
+          "question": "She is too young to drive a car. (ENOUGH)\nShe is _______ to drive a car.",
+          "correctAnswer": ["not old enough"]
+        }
+      ]
     }
   ]
 }
