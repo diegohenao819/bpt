@@ -3,6 +3,13 @@
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectValue,
+} from "@/components/ui/select"; // Import Select components
 
 import { useToast } from "@/hooks/use-toast";
 
@@ -17,7 +24,11 @@ import KeyWordTransformation from "@/components/KeyWordTransformation";
 
 type Question = {
   id: number;
-  type: "multiple-choice" | "fill-in-the-gap" | "word-formation" | "key-word-transformation";
+  type:
+    | "multiple-choice"
+    | "fill-in-the-gap"
+    | "word-formation"
+    | "key-word-transformation";
   question: string;
   options?: string[];
   correctAnswer: string | string[];
@@ -30,9 +41,19 @@ type Section = {
 
 const sections: Section[] = questionsData.sections as Section[];
 
+// List of teacher emails
+const teacherEmails = [
+  "dialhenao@utp.edu.co",
+  "laura.alfonso@utp.edu.co",
+  "mauricio.ramirez@utp.edu.co",
+  "sohincapie@utp.edu.co",
+];
+
 export default function UseOfEnglishTest() {
   const { toast } = useToast();
-  const [answersStatus, setAnswersStatus] = useState<{ [id: number]: number }>({});
+  const [answersStatus, setAnswersStatus] = useState<{ [id: number]: number }>(
+    {}
+  );
   const [teacherEmail, setTeacherEmail] = useState("");
   const [studentName, setStudentName] = useState("");
 
@@ -60,7 +81,7 @@ export default function UseOfEnglishTest() {
     if (!teacherEmail) {
       toast({
         title: "Error",
-        description: "Please enter the teacher's email.",
+        description: "Please select your teacher's email.",
         variant: "destructive",
       });
       return;
@@ -110,7 +131,9 @@ export default function UseOfEnglishTest() {
       <p className="text-center mb-4"> (2024-2)</p>
       {sections.map((section) => (
         <div key={section.title}>
-          <h2 className="text-2xl font-bold my-4 bg-green-300 text-center rounded-md">{section.title}</h2>
+          <h2 className="text-2xl font-bold my-4 bg-green-300 text-center rounded-md">
+            {section.title}
+          </h2>
           {section.questions.map((question) => (
             <div key={question.id} className="mb-8">
               {question.type === "multiple-choice" ? (
@@ -118,21 +141,21 @@ export default function UseOfEnglishTest() {
                   questionId={question.id}
                   question={question.question}
                   options={question.options!}
-                  correctAnswer={question.correctAnswer}
+                  correctAnswer={question.correctAnswer as string}
                   onAnswerUpdate={handleAnswerUpdate}
                 />
               ) : question.type === "fill-in-the-gap" ? (
                 <FillInTheGap
                   questionId={question.id}
                   question={question.question}
-                  correctAnswer={question.correctAnswer}
+                  correctAnswer={question.correctAnswer as string}
                   onAnswerUpdate={handleAnswerUpdate}
                 />
               ) : question.type === "word-formation" ? (
                 <WordFormation
                   questionId={question.id}
                   question={question.question}
-                  correctAnswer={question.correctAnswer}
+                  correctAnswer={question.correctAnswer as string}
                   onAnswerUpdate={handleAnswerUpdate}
                 />
               ) : question.type === "key-word-transformation" ? (
@@ -170,13 +193,19 @@ export default function UseOfEnglishTest() {
           onChange={(e) => setStudentName(e.target.value)}
           className="mb-2"
         />
-        <Input
-          type="email"
-          placeholder="Teacher's email"
-          value={teacherEmail}
-          onChange={(e) => setTeacherEmail(e.target.value)}
-          className="mb-2"
-        />
+        {/* Replace the teacher's email input with a select component */}
+        <Select onValueChange={(value) => setTeacherEmail(value)}>
+          <SelectTrigger className="w-full mb-2">
+            <SelectValue placeholder="Select your teacher's email" />
+          </SelectTrigger>
+          <SelectContent>
+            {teacherEmails.map((email) => (
+              <SelectItem key={email} value={email}>
+                {email}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
         <Button className="w-full" onClick={handleSubmit}>
           Send score
         </Button>

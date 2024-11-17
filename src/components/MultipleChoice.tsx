@@ -94,7 +94,7 @@ function MultipleChoice({
       onKeyDown={handleKeyDown}
       tabIndex={0}
     >
-      <h2 className="text-xl font-semibold">{question}</h2>
+      <h2 className="text-xl font-semibold"><span className="text-sm font-normal">{questionId} </span>{question}</h2>
       <RadioGroup
         value={selectedAnswer || ""}
         onValueChange={setSelectedAnswer}
