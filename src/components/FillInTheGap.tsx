@@ -84,7 +84,7 @@ function FillInTheGap({
 
   return (
     <div className="space-y-4 border-4 p-4 rounded-md">
-      <h2 className="text-xl font-semibold">{question}</h2>
+      <h2 className="text-xl font-semibold"><span className="text-sm font-normal">{questionId} </span>{question}</h2>
       <div className="flex items-center">
         <Input
           type="text"

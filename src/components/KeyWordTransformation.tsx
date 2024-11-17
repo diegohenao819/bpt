@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { CheckIcon, Cross2Icon } from "@radix-ui/react-icons";
+import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { CheckIcon, Cross2Icon } from "@radix-ui/react-icons";
+import { useState } from "react";
 
 function KeyWordTransformation({
   questionId,
@@ -103,6 +103,12 @@ function KeyWordTransformation({
     <div className="space-y-4 border-4 p-4 rounded-md">
       {question.split("\n").map((part, index) => (
         <h2 key={index} className="text-xl font-semibold">
+          {index === 0 ? (
+            <span className="text-sm font-normal ">{questionId} </span>
+          ) : (
+            ""
+          )}
+
           {part}
         </h2>
       ))}
@@ -137,11 +143,11 @@ function KeyWordTransformation({
           <p className={isCorrect ? "text-green-600" : "text-red-600"}>
             {isCorrect
               ? `Correct! Score obtained: ${getScore(attempts).toFixed(2)}`
-              : `Incorrect. The correct transformation is: ${Array.isArray(
-                  correctAnswer
-                )
-                  ? correctAnswer.join(" / ")
-                  : correctAnswer}`}
+              : `Incorrect. The correct transformation is: ${
+                  Array.isArray(correctAnswer)
+                    ? correctAnswer.join(" / ")
+                    : correctAnswer
+                }`}
           </p>
         </div>
       )}
