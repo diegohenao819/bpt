@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import { Textarea } from "@/components/ui/textarea";
 import { Button } from "../../components/ui/button";
-import { Input } from "../../components/ui/input";
 import Writing from "../../images/writing.jpg";
 
 import ReactMarkdown, { Components } from "react-markdown";
@@ -23,7 +23,7 @@ const ChatForm = () => {
     {
       role: "system",
       content:
-        "You are a writing assistant. The user will send you a response paragraph, you will create a table giving feedback on the paragraph.If the user does not send a response paragraph, you will respond that you will wait for the user to send a response paragraph. In the table, you need to give feedback telling the user if the paragraph meets the correct requirements. These are the rubrics:  1) Topic Setence: Clearly presents a concise and focused topic sentence that accurately reflects the main idea of the response paragraph and catches the audiences attention. 2) Synthesis of authors arguments: Demonstrates a synthesis of the author's argument, and the key pts in a coherent and concise manner. 3) Reaction and Arguments: Provides a thoughtful and well-justified analysis of the speaker's claim, supported by the identification of its pros and cons. 4) Conclusion: Offers a strong and concise conclusion that effectively summarizes the main pts or makes a final reflection or adds further information. 5) Language Use: Demonstrates effective use of simple language with minimal errors in grammar, spelling, and sentence structure within. From 0 to 5 mistakes. 6) Word Limit: The word limit isn’t exceeded more or less than 5% = from 190 to 210 words. Finally, make a list of all the grammar mistakes and rewrite the paragraph with the corrections.",
+        "You are a writing assistant. The user will send you a response paragraph, you will create a table giving feedback on the paragraph. If the user does not send a response paragraph, you will respond that you will wait for the user to send a response paragraph. In the table, you need to give feedback telling the user if the paragraph meets the correct requirements. These are the rubrics:  1) Topic Setence: Clearly presents a concise and focused topic sentence that accurately reflects the main idea of the response paragraph and catches the audiences attention. 2) Synthesis of authors arguments: Demonstrates a synthesis of the author's argument, and the key pts in a coherent and concise manner. 3) Reaction and Arguments: Provides a thoughtful and well-justified analysis of the speaker's claim, supported by the identification of its pros and cons. 4) Conclusion: Offers a strong and concise conclusion that effectively summarizes the main pts or makes a final reflection or adds further information. 5) Language Use: Demonstrates effective use of simple language with minimal errors in grammar, spelling, and sentence structure within. From 0 to 5 mistakes. 6) Word Limit: The word limit isn’t exceeded more or less than 5% = from 190 to 210 words. Finally, make a list of all the grammar mistakes and rewrite the paragraph with the corrections.",
     },
   ]);
 
@@ -97,7 +97,15 @@ const ChatForm = () => {
     }
   }, [allMessages]);
 
-  // Define custom components with updated styles
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
+
+  const handleInput = () => {
+    if (textAreaRef.current) {
+      textAreaRef.current.style.height = "auto"; // Reset height
+      textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`; // Adjust height to content
+    }
+  };
+
   const markdownComponents: Components = {
     table: (props) => (
       <div className="overflow-x-auto">
@@ -116,17 +124,17 @@ const ChatForm = () => {
   };
 
   return (
-    <div className="w-[80%] min-h-screen max-h-screen bg-gray-200 m-auto ">
+    <div className="w-[80%] bg-gray-200 m-auto">
       {allMessages.length === 1 ? (
-        <ScrollArea ref={scrollAreaRef} className="rounded-md border h-[550px]">
+        <ScrollArea ref={scrollAreaRef} className="rounded-md border">
           <div
             className="flex flex-col justify-center items-center align-middle
-           p-4 w-full h-full text-black"
+           p-4 text-black"
           >
-            <h2 className="text-black font-bold text-2xl mb-14 mt-6">
+            <h2 className="text-black font-bold text-2xl mb-4 mt-2">
               Send your Reponse Paragraph to get Instant Feedback!!
             </h2>
-            <Image src={Writing} alt="ChatGPT" width={500} height={500} />
+            <Image src={Writing} alt="ChatGPT" width={400} height={400} />
           </div>
         </ScrollArea>
       ) : (
@@ -175,14 +183,16 @@ const ChatForm = () => {
         </ScrollArea>
       )}
 
-      <form onSubmit={handleSubmit} className="flex gap-6 mt-4  ml-4">
-        <Input
-          type="text"
+      <form onSubmit={handleSubmit} className="flex gap-6 mt-4 ml-4">
+        <Textarea
+          ref={textAreaRef}
           placeholder="Send your response paragraph..."
           name="message"
-          className="w-[80%] bg-white text-lg  border border-blue-900 hover:bg-white-100"
+          className="w-[80%] mb-4 bg-white text-lg border border-blue-900 resize-none overflow-hidden"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          onInput={handleInput}
+          rows={1}
         />
         <Button type="submit">Send</Button>
       </form>
