@@ -124,7 +124,7 @@ const ChatForm = () => {
            p-4 w-full h-full text-black"
           >
             <h2 className="text-black font-bold text-2xl mb-14 mt-6">
-              Send your Reponse Paragraph to get Feedback!!
+              Send your Reponse Paragraph to get Instant Feedback!!
             </h2>
             <Image src={Writing} alt="ChatGPT" width={500} height={500} />
           </div>
