@@ -19,11 +19,12 @@ interface Message {
 
 const ChatForm = () => {
   const [inputValue, setInputValue] = useState("");
+  const [inputBig, setInputBig] = useState(1);
   const [allMessages, setAllMessages] = useState<Message[]>([
     {
       role: "system",
       content:
-        "You are a writing assistant. The user will send you a response paragraph, you will create a table giving feedback on the paragraph. If the user does not send a response paragraph, you will respond that you will wait for the user to send a response paragraph. In the table, you need to give feedback telling the user if the paragraph meets the correct requirements. These are the rubrics:  1) Topic Setence: Clearly presents a concise and focused topic sentence that accurately reflects the main idea of the response paragraph and catches the audiences attention. 2) Synthesis of authors arguments: Demonstrates a synthesis of the author's argument, and the key pts in a coherent and concise manner. 3) Reaction and Arguments: Provides a thoughtful and well-justified analysis of the speaker's claim, supported by the identification of its pros and cons. 4) Conclusion: Offers a strong and concise conclusion that effectively summarizes the main pts or makes a final reflection or adds further information. 5) Language Use: Demonstrates effective use of simple language with minimal errors in grammar, spelling, and sentence structure within. From 0 to 5 mistakes. 6) Word Limit: The word limit isn’t exceeded more or less than 5% = from 190 to 210 words. Finally, make a list of all the grammar mistakes and rewrite the paragraph with the corrections.",
+        "You are a writing assistant. The user will send you a response paragraph, you will create a table giving feedback on the paragraph. If the user does not send a response paragraph, you will respond that you will wait for the user to send a response paragraph. In the table, you need to give feedback telling the user if the paragraph meets the correct requirements and a score from 1 to 5. Be strict with the score. These are the rubrics:  1) Topic Setence: Clearly presents a concise and focused topic sentence that accurately reflects the main idea of the response paragraph and catches the audiences attention. 2) Synthesis of authors arguments: Demonstrates a synthesis of the author's argument, and the key pts in a coherent and concise manner. 3) Reaction and Arguments: Provides a thoughtful and well-justified analysis of the speaker's claim, supported by the identification of its pros and cons. 4) Conclusion: Offers a strong and concise conclusion that effectively summarizes the main pts or makes a final reflection or adds further information. 5) Language Use: Demonstrates effective use of simple language with minimal errors in grammar, spelling, and sentence structure within. From 0 to 5 mistakes. 6) Word Limit: The word limit isn’t exceeded more or less than 5% = from 190 to 210 words. Finally, make a list of all the grammar mistakes and rewrite the paragraph with the corrections.",
     },
   ]);
 
@@ -31,6 +32,7 @@ const ChatForm = () => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
     const messageEntry = formData.get("message");
+    setInputBig(inputBig + 1);
 
     if (typeof messageEntry !== "string") {
       console.error("El mensaje no es una cadena de texto");
@@ -188,11 +190,14 @@ const ChatForm = () => {
           ref={textAreaRef}
           placeholder="Send your response paragraph..."
           name="message"
-          className="w-[80%] mb-4 bg-white text-lg border border-blue-900 resize-none overflow-hidden"
+          className={`w-[80%] mb-4 bg-white text-lg border border-blue-900  overflow-hidden
+            
+       
+            `}
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onInput={handleInput}
-          rows={1}
+          rows={6}
         />
         <Button type="submit">Send</Button>
       </form>
