@@ -1,8 +1,13 @@
 // Footer.jsx
 
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
-import Image from 'next/image' // If you're using Next.js
-import UTPLogo from "../images/UTPLogo.png"
+import Image from "next/image"; // If you're using Next.js
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
+import UTPLogo from "../images/UTPLogo.png";
 
 export default function Footer() {
   return (
@@ -10,20 +15,31 @@ export default function Footer() {
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         {/* Left Section */}
         <div className="mb-4 md:mb-0 flex flex-col items-center md:items-start">
-         <div className='flex justify-center   w-full'>
-             <Image
-               src={UTPLogo} // Adjust the path according to where you saved the logo
-               alt="Universidad Tecnológica de Pereira Logo"
-               width={100} // Adjust the width as needed
-               height={100} // Adjust the height as needed
-               className="mb-2"
-             />
-         </div>
+          <div className="flex justify-center   w-full">
+            <Image
+              src={UTPLogo} // Adjust the path according to where you saved the logo
+              alt="Universidad Tecnológica de Pereira Logo"
+              width={100} // Adjust the width as needed
+              height={100} // Adjust the height as needed
+              className="mb-2"
+            />
+          </div>
           <h2 className="text-lg font-semibold text-center md:text-left">
             Upper-Intermediate English Course
           </h2>
-          <p className="text-center md:text-left">Page created by Professor Diego Henao</p>
-          <p className="text-center md:text-left">Professor at Universidad Tecnológica de Pereira</p>
+
+          <p className="text-center md:text-left font-bold ">
+            Page created by
+            <span className="font-semibold text-black text-opacity-75 ml-1">
+              Professor Diego Henao
+            </span>
+          </p>
+          <p className="text-center md:text-left font-bold">
+            Professor at 
+            <span className="font-semibold text-black text-opacity-75 ml-1">
+              Universidad Tecnológica de Pereira
+            </span>
+          </p>
         </div>
         {/* Right Section */}
         <div className="flex space-x-4">
@@ -42,5 +58,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
