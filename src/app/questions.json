@@ -254,7 +254,9 @@
           "id": 37,
           "type": "key-word-transformation",
           "question": "She sings better than anyone else in the choir. (BEST)\nShe _______ in the choir.",
-          "correctAnswer": ["sings the best"]
+          "correctAnswer": ["sings the best", "sings best", "is the best singer", "is the best at singing"
+   
+        ]
         },
         {
           "id": 38,
