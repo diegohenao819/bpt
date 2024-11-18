@@ -7,7 +7,8 @@ import {
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
-import UTPLogo from "../images/UTPLogo.png";
+
+import AZUL from "../images/AZUL.png";
 
 export default function Footer() {
   return (
@@ -17,7 +18,7 @@ export default function Footer() {
         <div className="mb-4 md:mb-0 flex flex-col items-center md:items-start">
           <div className="flex justify-center   w-full">
             <Image
-              src={UTPLogo} // Adjust the path according to where you saved the logo
+              src={AZUL} // Adjust the path according to where you saved the logo
               alt="Universidad Tecnológica de Pereira Logo"
               width={100} // Adjust the width as needed
               height={100} // Adjust the height as needed
