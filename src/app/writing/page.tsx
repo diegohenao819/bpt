@@ -190,18 +190,19 @@ const ChatForm = () => {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="flex gap-6 mt-2 ml-4">
+      <form onSubmit={handleSubmit} className="flex flex-col m-auto justify-center align-middle  gap-6 mt-2 ml-4">
         <Textarea
           ref={textAreaRef}
           placeholder="Send your response paragraph..."
           name="message"
-          className="w-[80%] mb-4 bg-white text-lg border border-blue-900 overflow-hidden"
+          className="w-[100%] mb-1 bg-white text-lg border border-blue-900 overflow-hidden"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onInput={handleInput}
           rows={6}
         />
-        <Button type="submit">Send</Button>
+        <Button className="w-[50%] m-auto mb-2 bg-green-600 "
+        type="submit">Send</Button>
       </form>
     </div>
   );
