@@ -127,7 +127,7 @@ const ChatForm = () => {
       {allMessages.length === 1 ? (
         <div
           ref={scrollAreaRef}
-          className="rounded-md border h-[550px] overflow-auto"
+          className="rounded-md border  overflow-auto"
         >
           <div
             className="flex flex-col justify-center items-center align-middle
@@ -142,7 +142,7 @@ const ChatForm = () => {
       ) : (
         <div
           ref={scrollAreaRef}
-          className="rounded-md border h-[550px] overflow-auto"
+          className="rounded-md border  overflow-auto"
         >
           <div className="ml-4 mr-4 p-4">
             {allMessages.map((message, index) => {
@@ -190,7 +190,7 @@ const ChatForm = () => {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="flex gap-6 mt-4 ml-4">
+      <form onSubmit={handleSubmit} className="flex gap-6 mt-2 ml-4">
         <Textarea
           ref={textAreaRef}
           placeholder="Send your response paragraph..."
