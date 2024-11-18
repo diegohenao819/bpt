@@ -14,8 +14,11 @@ import {
 import Image from 'next/image'
 
 const navigation = [
-  { name: 'Practice', href: '/' },
+  { name: 'Use of English', href: '/' },
+  { name: 'Writing Feedback with AI', href: '/writing' },
   { name: `Exam Information`, href: '/info' },
+ 
+   
 
 ]
 
