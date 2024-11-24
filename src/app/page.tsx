@@ -195,7 +195,7 @@ export default function UseOfEnglishTest() {
         />
         {/* Replace the teacher's email input with a select component */}
         <Select onValueChange={(value) => setTeacherEmail(value)}>
-          <SelectTrigger className="w-full mb-2">
+          <SelectTrigger className="w-full mb-2 ">
             <SelectValue placeholder="Select your teacher's email" />
           </SelectTrigger>
           <SelectContent>
