@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-export const mtadata : Metadata = {
+export const metadata: Metadata = {
   title: "BPT Exam Practice - UTP Licenciatura en Bilingüismo",
   description:
     "Practice and prepare for the Bilingualism Proficiency Test (BPT Exam) with tailored resources and exercises. Designed for students of the Licenciatura en Bilingüismo con Énfasis en Inglés at Universidad Tecnológica de Pereira.",
