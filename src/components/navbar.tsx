@@ -17,8 +17,9 @@ const navigation = [
   { name: 'Use of English', href: '/' },
   { name: 'Writing Feedback with AI', href: '/writing' },
   { name: `Exam Information`, href: '/info' },
- 
-   
+  { name: 'Conditionals Practice', href: '/conditionals' },
+
+
 
 ]
 
